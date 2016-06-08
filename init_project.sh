@@ -24,7 +24,7 @@ if ! echo ${vagrant_plugin_list} | grep -q 'vagrant-host-shell' ; then
 fi
 
 # Generate random IP address and host name to prevent collisions, if not specified explicitly in local config
-if [ ! -f "${vagrant_dir}/etc/config.yaml" ]; then
+if [[ ! -f "${vagrant_dir}/etc/config.yaml" ]]; then
     cp "${config_path}.dist" ${config_path}
 fi
 random_ip=$(( ( RANDOM % 240 )  + 12 ))
