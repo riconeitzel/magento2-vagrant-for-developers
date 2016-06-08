@@ -69,7 +69,7 @@ if [[ ! -d ${magento_ce_dir} ]]; then
     # Check out EE repository
     # By default EE repository is not specified and EE project is not checked out
     repository_url_ee=$(bash "${vagrant_dir}/scripts/get_config_value.sh" "repository_url_ee")
-    if [ -n "${repository_url_ee}" ]; then
+    if [[ -n "${repository_url_ee}" ]]; then
         git clone ${repository_url_ee} "${magento_ee_dir}"
     fi
 fi
